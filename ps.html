@@ -3,6 +3,7 @@
         <title>PASSENGER COUNT APP</title>
     </head>
     <body>
+        <link rel="stylesheet" href="ps.css">
         <div class="container">
         <h1>Passenger count</h1>
         <h2 id="count-el">0</h2>
@@ -10,85 +11,8 @@
         <button id="save" onclick="save()">save</button>
         <h3 id="vlog">Previous entries : </h3>
         </div>
+        <script src="ps.js"></script>
     </body>
-
-    <style>
-        body{
-            text-align: center;
-            background-image: url(train-3384786_1280.jpg);
-            height: 100vh;
-        }
-        h1 {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-weight: 600;
-            font-size: 3em;
-            text-align: center;
-
-        }
-        h2 {
-            font-size: 3em;
-            margin-top: 0px;
-            margin-bottom: 20px;
-        }
-
-        button{
-            padding-top: 10px;
-           padding-bottom: 10px;
-           margin-bottom: 5px;
-           width: 200px;
-
-        }
-        #add{
-           
-           
-            background-color: red;
-            border-radius: 7px;
-            color: #fff;
-            border: 1px solid rgb(24, 24, 101);
-        }
-
-         #vlog{
-            font-size: 3em;
-            margin-top: 10px;
-            margin-bottom: 10px;
-         }
-        #save{
-            
-            background-color: green;
-            color: #fff;
-            border-radius: 7px;
-            border: 1px solid rgb(24, 24, 101);
-        }
-        .container{
-            background: #fff;
-            max-width: 80%;
-            border-radius: 10px;
-            border: 3px solid black;
-            margin: auto;
-        }
-
-    </style>
-
-    <script>
-        let vlog = document.getElementById("vlog")
-        let countEl = document.getElementById("count-el")
-        let count = 0
-
-
-        function increment(){
-           count = count + 1;
-           countEl.textContent = count
-        }
-
-        function save() {
-            let countStr = count + " - ";
-            vlog.textContent += countStr;
-            countEl.textContent = 0
-            count = 0
-        }
-
-    </script>
+   
 
 </html>
